@@ -1,0 +1,17 @@
+.full-sized-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+
+  &__page-links {
+    display: flex;
+    gap: 2rem;
+  }
+
+  &__account-links {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+  }
+}

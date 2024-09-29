@@ -1,0 +1,39 @@
+.header-link {
+  position: relative;
+
+  &__text {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+  }
+  
+  &__arrow {
+    &--normal {
+      transform: rotate(0);
+      transition: 0.15s;
+    }
+    
+    &--rotate {
+      transform: rotate(180deg);
+      transition: 0.15s;
+    }
+  }
+
+  &__drop-down {
+    display: grid;
+    position: absolute;
+    top: 2rem;
+    left: -1.5rem;
+    width: 10rem;
+    padding: 1.5rem 1.5rem 1.5rem 1.5rem;
+    border-radius: 0.6rem;
+    transform: translate(0, 100%);
+    overflow: hidden;
+    box-shadow: 0 10px 40px 0 rgba(0, 0, 0, 0.15);
+  }
+
+  &__sub-link {
+    font-size: 0.9375rem;
+    line-height: 2.2;
+  }
+}

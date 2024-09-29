@@ -1,0 +1,105 @@
+.mobile-header {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+
+  &__menu-icon {
+    z-index: 2;
+  }
+
+  &__modal-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 0;
+  }
+
+  &__modal {
+    display: grid;
+    grid-template-rows: max-content max-content;
+    gap: 2rem;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 60%;
+    height: 100%;
+    padding: 6rem 1.5rem;
+    background-color: white;
+    transform: translate(-50%);
+    box-shadow: 0 20px 40px 0 rgba(0, 0, 0, 0.24);
+    z-index: 1;
+    overflow: hidden;
+  }
+
+  &__page-links {
+    display: grid;
+    gap: 1.5rem;
+
+    width: 100%;
+  }
+
+  &__link-section {
+    display: grid;
+    width: 100%;
+  }
+
+  &__account-links {
+    display: grid;
+    gap: 1.5rem;
+    text-align: center;
+
+    & > * {
+      width: 100%;
+    }
+  }
+
+  &__login {
+    width: 100%;
+  }
+
+  &__link-section {
+    display: grid;
+    gap: 1.5rem;
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1.125rem;
+    cursor: pointer;
+  }
+
+  &__arrow {
+    &--normal {
+      transform: rotate(0);
+      transition: 0.15s;
+    }
+
+    &--rotate {
+      transform: rotate(180deg);
+      transition: 0.15s;
+    }
+  }
+
+  &__sub-links-list {
+    display: grid;
+    gap: 1rem;
+    transform-origin: top;
+    width: 100%;
+    padding: 1rem 1.5rem;
+  }
+
+  &__sub-link {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  &__register {
+    width: 100%;
+  }
+}

@@ -1,6 +1,34 @@
 @use '../abstract/index' as a;
 
 h1, h2, h3, h4,
-h5, h6, p {
+h5, h6, p, a, button {
+  font-family: 'Epilogue', sans-serif;
+}
 
+h1 {
+  font-size: 2.25rem;
+  line-height: 1.2;
+  letter-spacing: -0.03125rem;
+  
+  @include a.breakpoint(medium) {
+    font-size: 5rem;
+    line-height: 1;
+    letter-spacing: -0.06944rem;
+  }
+}
+
+p {
+  font-size: 1rem;
+  line-height: 1.7;
+  
+  @include a.breakpoint(medium) {
+    font-size: 1.125rem;
+    line-height: 1.5;
+  }
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  line-height: 1.7;
 }

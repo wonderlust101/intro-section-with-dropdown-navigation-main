@@ -1,0 +1,36 @@
+.button {
+  display: block;
+  width: max-content;
+  padding: 1rem 1.75rem;
+  font-weight: 700;
+  text-decoration: none;
+  text-align: center;
+  border: none;
+  border-radius: 1rem;
+  cursor: pointer;
+  transition: 0.15s;
+
+  &--black {
+    color: $clr-white;
+    background-color: $clr-black;
+    border: black 1px solid;
+    
+    &:hover {
+      color: $clr-black;
+      background-color: $clr-white;
+    }
+  }
+
+  &--white {
+    padding: 0.8rem 1.5rem;
+    font-weight: 400;
+    color: $clr-black;
+    background-color: $clr-white;
+    border: black 1px solid;
+
+    &:hover {
+      color: $clr-white;
+      background-color: $clr-black;
+    }
+  }
+}
