@@ -12,5 +12,5 @@ export default defineConfig({
             }
         }
     },
-    // base: '//' //TODO: Change to git repository
+    base: '/intro-section-with-dropdown-navigation-main/'
 })
