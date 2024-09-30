@@ -1,6 +1,6 @@
 import {useEffect, useRef} from "react";
 import {AnimatePresence, motion} from "framer-motion";
-import dropdownArrow from '/images/icon-arrow-down.svg'
+import dropdownArrow from "/images/icon-arrow-down.svg";
 import "./HeaderLink.scss";
 
 type headerLinkProps = {
@@ -55,7 +55,7 @@ export default function HeaderLink({link, isOpen, onToggle, closeDropdown}: head
     return (
         <li className="header-link" ref={dropdownRef}>
             <div className="header-link__text" onClick={onToggle}>
-                <a href='#' aria-label={`Go to ${link.title} Page`}>
+                <a href="#" aria-label={`Go to ${link.title} Page`}>
                     {link.title}
                 </a>
 
@@ -79,10 +79,10 @@ export default function HeaderLink({link, isOpen, onToggle, closeDropdown}: head
                     >
                         <ul className="header-link__sub-links">
                             {link.subLinks.map((subLink) => (
-                                <li>
-                                    {subLink.icon !== '' &&
-                                        <img src={`/images/${subLink.icon}`} alt="" role='presentation'/>}
-                                    <a href='#' className="header-link__sub-link">
+                                <li className="header-link__sub-link">
+                                    {subLink.icon !== "" &&
+                                        <img src={`/images/${subLink.icon}`} alt="" role="presentation"/>}
+                                    <a href="#" className="header-link__sub-link-text">
                                         {subLink.title}
                                     </a>
                                 </li>

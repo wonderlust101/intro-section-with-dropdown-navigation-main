@@ -28,13 +28,13 @@ export default function FullSizeHeader({links}: fullSizeHeader) {
                         />
                     ) : (
                         <li>
-                            <a href="#">{link.title}</a>
+                            <a className="header-link__text" href="#">{link.title}</a>
                         </li>
                     )))}
             </ul>
 
             <div className="header__account-links">
-                <a href="#">Login</a>
+                <a className="header-link__text" href="#">Login</a>
                 <Button variant="button--white">Register</Button>
             </div>
         </nav>

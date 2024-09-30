@@ -10,50 +10,50 @@
     gap: 2rem;
     grid-template: 1fr / 1fr 1fr;
   }
-  
+
   @include breakpoint(large) {
     gap: 8rem;
   }
-  
+
   &__main {
     grid-area: 2/2;
     display: grid;
     gap: 3.5rem;
-    
+
     @include breakpoint(medium) {
       grid-area: unset;
       grid-template-rows: 1fr max-content;
     }
   }
-  
+
   &__text {
     display: grid;
     gap: 1rem;
     text-align: center;
     justify-items: center;
     align-content: center;
-    
+
     @include breakpoint(medium) {
       text-align: left;
       justify-items: flex-start;
       gap: 3rem;
     }
   }
-  
+
   &__client-list {
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
-  
+
   &__client {
     width: 4rem;
-    
+
     @include breakpoint(medium) {
       width: 6rem;
     }
   }
-  
+
   &__image {
     grid-area: 1/1 / 1/ 4;
     width: 100%;
@@ -64,7 +64,7 @@
       align-self: center;
       justify-self: center;
     }
-    
+
     & > * {
       width: 100%;
     }

@@ -5,14 +5,20 @@
     display: flex;
     align-items: center;
     gap: 0.5rem;
+    opacity: 0.65;
+    transition: opacity 0.15s;
+
+    &:hover {
+      opacity: 1;
+    }
   }
-  
+
   &__arrow {
     &--normal {
       transform: rotate(0);
       transition: 0.15s;
     }
-    
+
     &--rotate {
       transform: rotate(180deg);
       transition: 0.15s;
@@ -33,7 +39,19 @@
   }
 
   &__sub-link {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  &__sub-link-text {
     font-size: 0.9375rem;
     line-height: 2.2;
+    opacity: 0.65;
+    transition: opacity 0.15s;
+
+    &:hover {
+      opacity: 1;
+    }
   }
 }

@@ -68,9 +68,7 @@ export default function MobileHeader({links}: mobileHeaderHeader) {
             />
 
             <AnimatePresence>
-                {isOpen &&
-                    <div className="mobile-header__modal-background"></div>
-                }
+                {isOpen && <div className="mobile-header__modal-background"></div>}
             </AnimatePresence>
 
             <AnimatePresence>
@@ -87,48 +85,49 @@ export default function MobileHeader({links}: mobileHeaderHeader) {
                             {links.map((link, index) => (
                                 link.subLinks.length !== 0 ?
                                     (<li className="mobile-header__link-section" key={link.title}>
-                                        <div className="mobile-header__link"
-                                             onClick={() => toggleAccordion(index)}
-                                        >
-                                            <p>{link.title}</p>
+                                            <div className="mobile-header__link"
+                                                 onClick={() => toggleAccordion(index)}
+                                            >
+                                                <p>{link.title}</p>
 
-                                            <img
-                                                className={`mobile-header__arrow${activeIndex === index ? "--rotate" : "--normal"}`}
-                                                src={dropdownArrowDark}
-                                                alt="Toggle Dropdown"
-                                                role="presentation"
-                                            />
-                                        </div>
+                                                <img
+                                                    className={`mobile-header__arrow${activeIndex === index ? "--rotate" : "--normal"}`}
+                                                    src={dropdownArrowDark}
+                                                    alt="Toggle Dropdown"
+                                                    role="presentation"
+                                                />
+                                            </div>
 
-                                        <AnimatePresence>
-                                            {activeIndex === index && (
-                                                <motion.ul
-                                                    key="accordian"
-                                                    variants={subLinksListVariants}
-                                                    initial="initial"
-                                                    animate="animate"
-                                                    exit="exit"
-                                                    className="mobile-header__sub-links-list"
-                                                >
-                                                    {link.subLinks.map((subLink) => (
-                                                        <li
-                                                            key={subLink.title}
-                                                            className="mobile-header__sub-link"
-                                                        >
-                                                            {subLink.icon !== "" &&
-                                                                <img src={`/images/${subLink.icon}`} alt=""
-                                                                     role="presentation"
-                                                                />
-                                                            }
-                                                            <a href={"#"}>
-                                                                {subLink.title}
-                                                            </a>
-                                                        </li>
-                                                    ))}
-                                                </motion.ul>
-                                            )}
-                                        </AnimatePresence>
-                                    </li>) : (
+                                            <AnimatePresence>
+                                                {activeIndex === index && (
+                                                    <motion.ul
+                                                        key="accordian"
+                                                        variants={subLinksListVariants}
+                                                        initial="initial"
+                                                        animate="animate"
+                                                        exit="exit"
+                                                        className="mobile-header__sub-links-list"
+                                                    >
+                                                        {link.subLinks.map((subLink) => (
+                                                            <li key={subLink.title} className="mobile-header__sub-link">
+                                                                {subLink.icon !== "" &&
+                                                                    <img
+                                                                        src={`/images/${subLink.icon}`}
+                                                                        alt=""
+                                                                        role="presentation"
+                                                                    />
+                                                                }
+
+                                                                <a href={"#"}>
+                                                                    {subLink.title}
+                                                                </a>
+                                                            </li>
+                                                        ))}
+                                                    </motion.ul>
+                                                )}
+                                            </AnimatePresence>
+                                        </li>
+                                    ) : (
                                         <li>
                                             <a href="#">{link.title}</a>
                                         </li>
@@ -139,14 +138,8 @@ export default function MobileHeader({links}: mobileHeaderHeader) {
                             <li>
                                 <a className="mobile-header__login" href="">Login</a>
                             </li>
-
                             <li>
-                                <Button
-                                    variant="button--white mobile-header__register"
-                                    location="#"
-                                >
-                                    Register
-                                </Button>
+                                <Button variant="button--white mobile-header__register" location="#">Register</Button>
                             </li>
                         </ul>
                     </motion.div>

@@ -1,7 +1,7 @@
 .button {
   display: block;
   width: max-content;
-  padding: 1rem 1.75rem;
+  padding: 0.75rem 1.25rem;
   font-weight: 700;
   text-decoration: none;
   text-align: center;
@@ -10,11 +10,15 @@
   cursor: pointer;
   transition: 0.15s;
 
+  @include breakpoint(medium) {
+    padding: 1rem 1.75rem;
+  }
+
   &--black {
     color: $clr-white;
     background-color: $clr-black;
     border: black 1px solid;
-    
+
     &:hover {
       color: $clr-black;
       background-color: $clr-white;

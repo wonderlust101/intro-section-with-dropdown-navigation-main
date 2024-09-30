@@ -1,10 +1,9 @@
+import FullSizeHeader from "./FullSizeHeader";
+import MobileHeader from "./MoblieHeader";
+import useWindowDimensions from "../../hooks/useWindowDimensions";
 import logo from "/images/logo.svg";
 import linksJSON from "/src/data/links.json";
 import "./Header.scss";
-import Button from "../Button";
-import useWindowDimensions from "../../hooks/useWindowDimensions";
-import FullSizeHeader from "./FullSizeHeader";
-import MobileHeader from "./MoblieHeader";
 
 const links: links[] = linksJSON;
 

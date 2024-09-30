@@ -3,7 +3,7 @@ declare global {
         title: string,
         subLinks: subLinks[]
     }
-    
+
     type subLinks = {
         title: string;
         icon: string;
